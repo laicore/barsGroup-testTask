@@ -1,0 +1,11 @@
+<form action="{{actionPath}}" method="{{method}}">
+    {%if method == 'POST' %}
+    
+    {% csrf_token %}
+    {%endif%}
+    {%for field in form %}
+    {{field.label}}<br>
+    {{field}}<br>
+    {%endfor%}
+    <button type="submit">Далее</button>
+</form>

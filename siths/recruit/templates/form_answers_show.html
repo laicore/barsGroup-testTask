@@ -1,0 +1,10 @@
+{% for k, v in form.items %}
+    {{k}}<br>
+    =>{{v}}<br>
+    <hr>
+{% endfor %}
+<form action="{{actionPath}}" method="{{method}}">
+{% csrf_token %}
+<input type="submit" name="btn" value="accept"/>
+<input type="submit" name="btn" value="return"/>
+</form> 
